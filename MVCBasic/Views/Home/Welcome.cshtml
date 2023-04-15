@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Welcome</title>
+</head>
+<body>
+    <form action="Login" method="post">
+        <div>
+            <h1>This is my view page</h1>
+            <input type="text" name="employeename" /><input type="submit" value="Login" />
+            <br />
+            @if(ViewBag.Name!=null)
+            { 
+              <label>Welcome,@ViewBag.Name</label>
+            }
+            
+        </div>
+    </form>
+</body>
+</html>
