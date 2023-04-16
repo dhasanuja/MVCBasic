@@ -1,0 +1,32 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index2</title>
+</head>
+<body>
+    <div>
+        <h1>Index TempData content</h1>
+        <h2> @TempData["Name"]</h2>
+        @{ 
+            TempData.Keep("Name");
+        }
+
+
+        @*<h2> @TempData.Peek("Name")</h2>*@
+        <ul>
+            @foreach (string s in (String[])TempData["Employees"])
+            {
+                <li>@s</li>
+            }
+        </ul>
+        <a href="Index3">Go to Tempdata</a>
+    </div>
+</body>
+</html>

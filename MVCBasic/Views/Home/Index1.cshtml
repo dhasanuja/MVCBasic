@@ -8,14 +8,14 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Index1</title>
 </head>
 <body>
     <div>
-        <h1>Index view content</h1>
-        <h2> @ViewBag.Name</h2>
+        <h1>Index viewData content</h1>
+        <h2> @ViewData["Name"]</h2>
         <ul>
-            @foreach(string s in ViewBag.Employees)
+            @foreach (string s in (String[])ViewData["Employees"])
             {
                 <li>@s</li>
             }

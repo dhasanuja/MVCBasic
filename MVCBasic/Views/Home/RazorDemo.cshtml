@@ -1,0 +1,38 @@
+﻿
+
+@{
+    Layout = null;
+}
+@using System;
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RazorDemo</title>
+</head>
+<body>
+    <div>
+        <h1> Razor view engin demo</h1>
+
+        <input type="text" />
+        <input type="button" value="submit" />
+
+        @{
+            int i = 10;
+            int j = 10;
+            int k = i + j;
+            <p>Result=@k</p>
+        }
+
+        @if (i == 10)
+        {
+            <p>TEN</p>
+        }
+        else
+        {
+            <p>No ten</p>
+        }
+    </div>
+</body>
+</html>

@@ -27,7 +27,41 @@ namespace MVCBasic.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+            //i have data from api,database
+            //i want to transfer my data to view
+            ViewBag.Name = "Anuja Dhas";
+            ViewBag.Employees = new string[] { "aaa","bbbb","cccc" };
+
             return View();
+        }
+
+        [HttpGet]
+        public ActionResult Index1()
+        {
+            ViewData["Name"] = "Anuja Dhas";
+            ViewData["Employees"] = new string[] { "aaa", "bbbb", "cccc" };
+
+            return View();
+        }
+        [HttpGet]
+        public ActionResult Index2()
+        {
+            TempData["Name"] = "Anuja Dhas";
+            TempData["Employees"] = new string[] { "aaa", "bbbb", "cccc" };
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Index3()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult RazorDemo() 
+        {
+            return View();
+
         }
     }
 }
